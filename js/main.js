@@ -13,8 +13,8 @@ var setup = {
             alt : "Optra Sedan Photo: Front Grille"
         },
         headlights : {
-            title: "The Headlights",
-            body : "Front Fog Lights<br>Battery Saver Mode",
+            title: "تيم فرونت",
+            body : "هذا النص هومثال على نص يمكن ان يستبدل",
             image : "img/Optra/hotspot/front-view/Headlights_Front.jpg",
             alt : "Optra Sedan Photo: Headlamps"
         },
@@ -157,8 +157,8 @@ var setup = {
             alt : "Malibu Midsize Sedan Photo:Headlamps"
         },
         hood : {
-            title: "The Hood",
-            body : "Transmission 6AT<br>Engine Type 1.5L Turbo<br>Max. Power (hp@rpm) 163@5400<br>Max. Torque (N.m@rpm) 250@1800<br>Fuel Consumption 7.5L/100 Km<br>Max. Speed 210 Km/h<br>Acceleration (from 0 to 100Km/h) 9.24 sec<br>Fuel Tank 61.7L<br>Engine Immobilizer",
+            title: "مؤسسة اوامر الشبكة",
+            body : "هذا النص هو مثال على على نص يمكن ان يستبدل",
             image : "img/Malibu/hotspot/front-view/Hood_Front.jpg",
             alt : "Malibu Midsize Sedan Photo:Hood Interior"
         },

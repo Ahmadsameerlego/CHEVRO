@@ -1,0 +1,690 @@
+
+<!doctype html>
+<html>
+
+<head>
+	<title>Chevrolet - Virtual Tour Egypt</title>
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"> </script>
+	<script src="js/popper.min.js">
+	</script>
+
+	<script src="js/hammer.js"></script>
+	<!-- <script src="js/aframe-component/aframe-master.1.0.4.min.js"></script> -->
+	<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+	<script src="js/aframe-component/aframe-environment-component.min.js"></script>
+	<script src="js/aframe-component/aframe-spritesheet-animation.js"></script>
+	<script src="js/animate.min.js"></script>
+
+	<script src="js/aframe-component/aframe-gif-shader.min.js"></script>
+
+	<script src="js/multitouch-look-controls.js"></script>
+	<script src="js/aframe-component/aframe-extras.min.js"></script>
+	<script src="js/main.js"></script>
+	<script async src="https://assets.gm.com/responsive-iframe.min.js"></script>
+	<script type="application/javascript">
+		$(document).ready(function () {
+
+			$('#closenav').hide();
+			$('#hamburger').click(function () {
+				$('.mainnav').addClass('animate__animated');
+				$('.mainnav').addClass('animate__slideInDown');
+				$('#closenav').show();
+				$('.mainnav').show();
+			});
+
+			$('#closenav').click(function () {
+				$('.mainnav').hide();
+				$('#closenav').hide();
+			});
+		});
+	</script>
+</head>
+
+<body id="">
+	<div id="splash">
+
+
+		<div class="loading"></div>
+	</div>
+	<!--BEGIN:Mobile Head-->
+	<div class="mainnavMob">
+		<a href="#" class="logo s"></a>
+		<div id="hamburger"></div>
+		<div id="closenav"></div>
+	</div>
+	<!--END:Mobile Head-->
+
+
+
+
+
+
+	<!--BEGIN:Slide01 Plus Icons-->
+
+
+	<!--	
+  <div style="position: absolute; top: 350px; left: 550px; z-index: 500;">
+    <button type="button" class="btn btn-link" style="width: 50px; height: 50px; border: 2px solid #fff; display: block;  color: #fff; text-decoration: none; border-radius: 100px; text-align: center; line-height: 50px;" data-toggle="collapse" data-target="#collapseOne"><i
+      class="fa fa-angle-right"></i>1 </button>
+  </div>
+
+  <div style="position: absolute; top: 450px; left: 550px; z-index: 500;">
+      <button type="button" style="width: 50px; height: 50px; border: 2px solid #fff; display: block;  color: #fff; text-decoration: none; border-radius: 100px; text-align: center; line-height: 50px;" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"><i
+        class="fa fa-angle-down"></i> 2</button>
+  </div>
+
+  <div style="position: absolute; top: 450px; right: 550px; z-index: 500;">
+      <button type="button" class="btn btn-link collapsed" style="width: 50px; height: 50px; border: 2px solid #fff; display: block; color: #fff; text-decoration: none; border-radius: 100px; text-align: center; line-height: 50px;" data-toggle="collapse"
+                data-target="#collapseThree"><i class="fa fa-angle-right"></i>3</button>
+  </div>-->
+
+	<!--END:Slide01 Plus Icons-->
+
+
+
+
+	<!--BEGIN:Modal PopUp-->
+	<div class="modal " id="myDialog" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 id="popup-title">Title Test</h4>
+
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+
+					<div class="popimg">
+						<img src="img/loading2.gif">
+					</div>
+					<div id="popup-msg">
+						<ul>
+							<li> مؤسسة اوامر الشبكة لتقنية المعلومات </li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!--END:Modal PopUp-->
+
+
+	<div id="bodyx">
+		<a-scene renderer="antialias: true;colorManagement: true;sortObjects: true; physicallyCorrectLights: true;" cursor="rayOrigin: mouse" vr-mode-ui="enabled: false" loading-screen="enabled:false" raycaster="objects: .clickable">
+			<a-assets>
+				<!--<a-div class="plusIco01" id="buttonx1">dfgfdg</a-div>
+		<img id="buttonx" src="img/logo.jpg" width="124" height="64">-->
+				<!-- <img id="buttonx1" class="" src="img/Plus.gif" width="70" height="70"> -->
+				<!-- <img id="buttonx2" src="img/Plus.gif" width="70" height="70"> -->
+				<!-- <img id="buttonx3" src="img/Plus.gif" width="70" height="70"> -->
+				<img crossorigin="anonymous" id="sprite" src="img/clipart1886423.png" width="70" height="70" />
+
+                <!-- init image  -->
+				<img crossorigin="anonymous" src="img/surface-exSKJMg-_vI-unsplash.png" style="object-fit: cover;" id="room" alt="" />
+
+
+				<img crossorigin="anonymous" src="img/min.jpg" id="outside" alt="" />
+				<img crossorigin="anonymous" id="navigate" src="img/navigate.png" />
+				<img crossorigin="anonymous" id="more-info" src="img/more-info.png" />
+
+				<img crossorigin="anonymous" id="back" src="img/back-icon.png" />
+
+				<!-- Captiva -->
+				<img crossorigin="anonymous" id="captiva-back" src="img/Captiva/back.jpg" />
+				<img crossorigin="anonymous" id="captiva-front" src="img/Captiva/front.jpg" />
+				<img crossorigin="anonymous" id="captiva-interior" src="img/Captiva/interior.jpg" />
+				<img crossorigin="anonymous" id="captiva-side" src="img/Captiva/side.jpg" />
+				<img crossorigin="anonymous" id="captiva-door-open" src="img/Captiva/door-open.jpg" />
+
+				<!-- Optra -->
+				<img crossorigin="anonymous" id="optra-back" src="img/Optra/back.jpg" />
+				<img crossorigin="anonymous" id="optra-front" src="img/Optra/front.jpg" />
+				<img crossorigin="anonymous" id="optra-interior" src="img/Optra/interior.jpg" />
+				<img crossorigin="anonymous" id="optra-side" src="img/Optra/side.jpg" />
+				<img crossorigin="anonymous" id="optra-door-open" src="img/Optra/door-open.jpg" />
+
+				<!-- Malibu -->
+				<img crossorigin="anonymous" id="malibu-back" src="img/Malibu/back.jpg" />
+				<img crossorigin="anonymous" id="malibu-front" src="img/nopath.png" style="width: 100% !important;"/>
+				<img crossorigin="anonymous" id="malibu-interior" src="img/Malibu/interior.jpg" />
+				<img crossorigin="anonymous" id="malibu-side" src="img/Malibu/side.jpg" />
+				<img crossorigin="anonymous" id="malibu-door-open" src="img/Malibu/door-open.jpg" />
+
+			</a-assets>
+
+
+			<a-entity id="scene1" class="scene1"
+				raycaster="objects:.landscape,.environmentGround,.environmentDressing; far:0.5;">
+
+				<a-image class="clickable" clickmalibu="" ascene="sceneMalibu" nav="MalibuFront" id="clickx_plus3" position="92.09532 -91.19697 -189.12548" material="shader: flat; src: #navigate; transparent: true; " spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" rotation="-218.219 -202.643 0" scale="120 120 0.00001" geometry="">
+				</a-image>
+
+				<!-- <a-image class="clickable" clickcaptiva="" ascene="sceneCaptiva" nav="CaptivaFront" id="clickx_plus2" position="98.86344 -140.79356 -306.1879"
+					material="shader: flat; src: #navigate; transparent: true; "
+					spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 1"
+					geometry="">
+				</a-image>
+
+
+				<a-image class="clickable" nav="OptraFront" ascene="sceneOptra" clickoptra="" id="clickx_plus1" position="-218.84694 -104.55561 -137.68895"
+					material="shader: flat; src: #navigate; transparent: true; "
+					spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+					rotation="0 43.753 0" geometry="">
+                </a-image> -->
+
+				<a-sky class="scene1"
+					src="#room" rotation="0 -230.166 0">
+				</a-sky>
+			</a-entity>
+
+
+
+				<!-- Optra Scene -->
+				<a-entity id="sceneOptra" visible="false" position="-803.78315 2.52652 -621.50143"
+					rotation="4.592829685768678 4.063989640862929 -1.6100114043176132">
+					<a-sky src="#optra-front" rotation="0 -90 0" material="" geometry="">
+					</a-sky>
+					<a-image class="clickable" modal-event carline="optra" part="grille" position="93.23981 -184.77922 -420.73185"
+						material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="" geometry=""></a-image>
+					<a-image class="clickable" modal-event carline="optra" part="headlights" position="185.39053 -136.85179 -417.71074"
+						material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="" geometry=""></a-image>
+					<a-image class="clickable" modal-event carline="optra" part="hood" position="53.79634 -108.86079 -429.57546"
+						material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="" geometry=""></a-image>
+
+					<a-image class="clickable" nav="OptraSide" clickoptraside ascene="sceneOptraSide" carline="optra" part="side"
+						position="206.77814 -121.15507 -400.78935" material="src: #navigate"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="100 0 0" geometry=""></a-image>
+
+					<a-image class="clickable" nav="CaptivaFront" clickcaptiva="" ascene="sceneCaptiva" carline="captiva" part="front"
+						position="339.55653 -71.66987 44.6384" material="src: #navigate"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="22.6278222031016 87.5370648978823 87.4012739004363" geometry=""></a-image>
+					<a-image class="clickable" nav="MalibuFront"  ascene="sceneMalibu" clickmalibu="" carline="malibu" part="front"
+						position="321.71186 -52.66217 287.39999" material="src:  #navigate"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="14.746214773281997 40.801470506856184 84.69347536064804" geometry=""></a-image>
+
+				</a-entity>
+
+				<a-entity id="sceneOptraSide" visible="false" position="-585.26637 2.52652 -1634.58496"
+					rotation="6.03439149831783 84.99542411868197 7.816290241174691">
+					<a-sky src="#optra-side" rotation="0 -90 0" material="" geometry="">
+					</a-sky>
+					<a-image class="clickable" modal-event="" carline="optra" part="side_mirrors"
+						position="190.53694 -93.50745 -272.57156" material="src:#more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="11.187000949929324 -53.71593920910494 -9.028668935671512" geometry=""></a-image>
+					<a-image class="clickable" modal-event="" carline="optra" part="rear_lights" position="111.11496 -60.97838 168.01829"
+						material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="5.3393936928241414 -80.54067726153981 11.637345776902151" geometry="" visible="false">
+					</a-image>
+
+					<a-image class="clickable" modal-event="" carline="optra" part="sunroof" position="232.06827 -1.13747 -79.94672"
+						material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="0.8571448615157116 -85.14152835644033 -1.5091708323745883" geometry=""></a-image>
+
+					<a-image class="clickable" modal-event="" carline="optra" part="wheel" position="169.51236 -204.30258 -326.82517"
+						material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="-18.799891173832574 -33.9872834493653 -12.443497394651219" geometry=""
+						id="optra_wheel"></a-image>
+
+					<a-image class="clickable" nav="OptraRear" clickoptrarear="" ascene="sceneOptraRear" position="219.55831 -133.11416 376.71603"
+						material="src: #navigate"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="70 70 70"
+						rotation="1.2404536264582322 -139.76388679744224 -86.76643666343134" geometry=""
+						id="captiva_move_rear"></a-image>
+					<a-image class="clickable" nav="OptraOpen" clickoptradoor="" ascene="sceneOptraDoor" position="229.90664 -148.73205 -92.04618"
+						material="src: #navigate"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="-8.970800198363298 -92.14536444411951 -85.94309631182836" geometry=""></a-image>
+					<a-image class="clickable" nav="OptraFront" clickoptra="" ascene="sceneOptra" position="138.55065 -122.18257 -414.10115"
+						material="src: #navigate"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="-10.274279182285925 -26.310221952407403 -96.5485450996999" geometry=""></a-image>
+				</a-entity>
+
+				<a-entity id="sceneOptraDoor" visible="false" position="-130.031 2.52652 -2524.137"
+					rotation="0 -65.01237509790424 0">
+					<a-sky src="#optra-door-open" rotation="0 -90 0" material="" geometry="">
+					</a-sky>
+					<a-image class="clickable" modal-event="" carline="optra" part="side_mirrors" position="-368.70748 -32.57011 226.9784"
+						material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="100 100 100"
+						rotation="-3.4222769103164072 -39.986151564385025 0" geometry=""></a-image>
+					<a-image class="clickable" modal-event="" carline="optra" part="sunroof" position="-82.29457 93.39228 -351.76132"
+						material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="-12.656637694439885 155.68523800853757 3.2916425330265797" geometry=""></a-image>
+					<a-image class="clickable" modal-event="" carline="optra" part="seating" position="-15.24176 -69.67424 -320.51171"
+						material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="12.496209511803254 164.7316686358581 3.5844239663384303" geometry=""></a-image>
+
+					<a-image class="clickable" carline="optra" nav="OptraInterior" ascene="sceneOptraInterior" clickoptrainterior
+						position="-127.14908 -111.92927 -255.51625" material="src: #navigate"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="35.16241988717862 -143.23658399373016 3.120901110077594" geometry=""></a-image>
+					<a-image class="clickable" carline="optra" nav="OptraSide" clickoptraside="" ascene="sceneOptraSide" position="-239.41083 -198.65411 170.3721"
+						material="src: #back" scale="50 50 50"
+						rotation="27.374777535760472 -52.977396611181305 8.137719564243081" geometry=""
+						id="optra_move_side"></a-image>
+					<a-image class="clickable" carline="optra" nav="OptraRear" clickoptrarear="" ascene="sceneOptraRear" position="347.76644 -84.28412 -199.75532"
+						material="src: #navigate"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="70 60 60"
+						rotation="69.00646388776123 118.06712101142821 -102.63794054635028" geometry="" id=""></a-image>
+				</a-entity>
+
+				<a-entity id="sceneOptraInterior" visible="false" position="-1137.42239 2.52652 -2519.56644"
+					rotation="0 -65.01237509790424 0">
+					<a-sky src="#optra-interior" rotation="0 -90 0" material="" geometry="">
+					</a-sky>
+					<a-image class="clickable" modal-event="" carline="optra" part="seating" position="345.4791 -101.12501 -317.57342"
+						material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="100 100 100"
+						rotation="-8.58176185546947 -64.8238719833062 -2.518722467395099" geometry=""></a-image>
+					<a-image class="clickable" modal-event="" carline="optra" part="dashboard" position="-436.53838 -57.17381 111.45135"
+						material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="100 100 100"
+						rotation="-8.582334813264602 104.89940496373164 -2.518722467395099" geometry=""></a-image>
+					<a-image class="clickable" modal-event="" carline="optra" part="sunroof" position="204.31461 396.85462 16.22735"
+						material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="100 100 100"
+						rotation="70.58209782437098 -108.86828361060284 -10.012437469911136" geometry=""></a-image>
+
+					<a-image class="clickable" nav="OptraOpen" clickoptradoor="" ascene="sceneOptraDoor" position="-288.70951 -111.56411 366.53797"
+						material="src: #back" scale="100 100 100"
+						rotation="-8.174961820926585 130.32154233368627 -3.6354172101050737" geometry=""></a-image>
+
+				</a-entity>
+
+				<a-entity id="sceneOptraRear" visible="false" position="479.98981 2.52652 -1615.15195"
+					rotation="5.938 0.921 -2.021">
+					<a-sky src="#optra-back" rotation="0 -90 0" material="" geometry="">
+					</a-sky>
+
+					<a-image class="clickable" modal-event="" carline="optra" part="rear_lights"
+						position="-164.98998 -126.09494 -436.20075" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="26.433407878360534 172.5817633869455 -7.120719477885872" geometry=""></a-image>
+					<a-image class="clickable" modal-event="" carline="optra" part="trunk" position="-9.66795 -127.54506 -300.25902"
+						material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="26.433407878360534 172.5817633869455 -7.120719477885872" geometry=""></a-image>
+					<!-- <a-image class="clickable" id="captiva_rear_camera" modal-event="" carline="captiva" part="rear_camera" position="331.38586 -270.48143 -13.5865" material="src: #more-info" spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50" rotation="1.4421347703442822 -87.81323055513536 2.071242429397926" geometry=""></a-image> -->
+					<a-image class="clickable" clickoptraside="" ascene="sceneOptraSide" position="-256.66258 -141.78566 -353.34924" material="src: #navigate"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="26.433407878360534 172.5817633869455 -7.120719477885872" geometry="" id=""></a-image>
+				</a-entity>
+
+
+			<!--  Captiva Scene -->
+
+				<a-entity id="sceneCaptiva" visible="false" position="142.619 2.52652 -3601.317"
+					rotation="-1.079452486026471 -91.68184158785867 0.03151267873219528">
+					<a-sky src="#captiva-front" rotation="0 -90 0" material="" geometry="">
+					</a-sky>
+					<a-image class="clickable" id="captiva_headlight" modal-event="" carline="captiva" part="headlamps"
+						position="-375.05693 -174.66706 -151.73098" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="-1.0164271285620803 88.3288925707531 1.1098192491684045" geometry=""></a-image>
+					<a-image class="clickable" id="captiva_hood" modal-event="" carline="captiva" part="hood"
+						position="-475.48095 -113.72684 1.5782" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="-1.1229972784564135 -90.62244262466179 -1.0479398072942758" geometry=""></a-image>
+					<a-image class="clickable" nav="CaptivaSide" clickcaptivaside="" position="-377.40466 -138.99941 -183.0108"
+						material="src: #navigate" ascene="sceneCaptivaSide"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="51.163412231797125 -95.43929880832661 175.77199239023395" geometry=""
+						id="captiva_info_side"></a-image>
+
+					<a-image class="clickable" nav="MalibuFront"  ascene="sceneMalibu" clickmalibu="" position="12.77151 -190.8639 -408.28148"
+						material="src: #navigate"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="50.26386849344173 -159.51087720662608 176.92879417860308" geometry=""
+						id="captiva_malibu-front"></a-image>
+					<a-image class="clickable" nav="OptraFront" clickoptra="" ascene="sceneOptra" position="33.06985 -176.46119 408.13629"
+						material="src: #navigate"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="34.70061590430318 -3.218876893044965 0.9064192318969624" geometry=""
+						id="captiva_optra-front"></a-image>
+
+				</a-entity>
+
+
+				<a-entity id="sceneCaptivaSide" visible="false" position="590.467 2.52652 -4582.929"
+					rotation="0 -27.740324609053935 0">
+					<a-sky src="#captiva-side" rotation="0 -90 0" material="" geometry="">
+					</a-sky>
+					<a-image class="clickable" id="captiva_rear" modal-event="" carline="captiva" part="rear_lights"
+						position="265.53326 -113.72684 -388.12848" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="1.4421347703442822 -16.109281367898227 2.071242429397926" geometry=""></a-image>
+					<a-image class="clickable" id="captiva_sidemirror" modal-event="" carline="captiva" part="side_mirror"
+						position="-375.05693 -80.32225 -151.73098" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="-1.0164271285620803 88.3288925707531 1.1098192491684045" geometry=""></a-image>
+					<a-image class="clickable" id="captiva_tire" modal-event="" carline="captiva" part="tire"
+						position="-389.87262 -264.88781 -65.46961" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="38.70960159683355 -97.77524773907498 -148.51696303365583" geometry=""></a-image>
+					<a-image class="clickable" id="sunroof" modal-event="" carline="captiva" part="sunroof"
+						position="-64.90204 79.40377 -399.03265" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="1.4421347703442822 25.065757621383252 2.071242429397926" geometry=""></a-image>
+
+					<a-image class="clickable" nav="CaptivaOpen" clickcaptivadoor="" position="-161.80661 -138.99941 -225.91588"
+						material="src: #navigate" ascene="sceneCaptivaDoor"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="49.47032194718554 -136.19837043834312 -170.2039885371526" geometry=""
+						id="captiva_info_side"></a-image>
+					<a-image class="clickable" nav="CaptivaRear" clickcaptivarear="" position="247.64855 -101.98093 -158.98274"
+						material="src: #navigate" ascene="sceneCaptivaRear"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="25.92576727187462 135.76922504979012 178.0815852624063" geometry=""
+						id="captiva_info_rear"></a-image>
+					<a-image class="clickable" nav="CaptivaFront" clickcaptiva="" ascene="sceneCaptiva" position="-462.5028 -154.93449 -15.53196"
+						material="src: #navigate"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="49.47032194718554 -97.2194786777981 -170.2039885371526" geometry=""
+						id="captiva_info_side"></a-image>
+				</a-entity>
+
+				<a-entity id="sceneCaptivaDoor" visible="false" position="591.40317 2.52652 -5639.725"
+					rotation="0 -27.740324609053935 0">
+					<a-sky src="#captiva-door-open" rotation="0 -90 0" material="" geometry="">
+					</a-sky>
+
+					<a-image class="clickable" id="captiva_steering_wheel" modal-event="" carline="captiva" part="steering_wheel"
+						position="-273.78341 -146.57287 -226.3983" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="3.2045529481666946 -112.75465633497522 0" geometry=""></a-image>
+					<a-image class="clickable" id="captiva_sidemirror" modal-event="" carline="captiva" part="side_mirror"
+						position="-154.72881 -56.82452 186.03638" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="-1.0164271285620803 88.3288925707531 1.1098192491684045" geometry=""></a-image>
+					<a-image class="clickable" id="captiva_rear_mirror" modal-event="" carline="captiva" part="rear_mirror"
+						position="-267.61987 19.15606 -301.4086" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="1.4421347703442822 33.93342541662301 2.071242429397926" geometry=""></a-image>
+					<a-image class="clickable" id="captiva_seating" modal-event="" carline="captiva" part="seating"
+						position="11.06012 -194.91338 -340.4515" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="11.28211194392104 148.26085089923234 0" geometry=""></a-image>
+					<a-image class="clickable" id="captiva_info_sunroof" modal-event="" carline="captiva" part="sunroof"
+						position="102.71031 142.13049 -269.8236" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="33.99988852085818 -172.53535380553993 0" geometry=""></a-image>
+					<a-image class="clickable" id="" modal-event="" carline="captiva" part="dashboard"
+						position="-391.8436 -146.57287 -164.30928" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="3.2045529481666946 -112.75465633497522 0" geometry=""></a-image>
+
+					<a-image class="clickable" id="captiva_info_interior" ascene="sceneCaptivaInterior" nav="CaptivaInterior" clickcaptivainterior=""
+						position="-148.28575 -194.91338 -380.6832" material="src: #navigate"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="33.99988852085818 -172.53535380553993 0" geometry=""></a-image>
+					<a-image class="clickable" nav="CaptivaSide" clickcaptivaside="" ascene="sceneCaptivaSide" position="-175.13707 -194.91338 190.55066"
+						material="src: #back" scale="50 50 50"
+						rotation="27.092882300556106 -100.74374207564779 158.91385518409973" geometry=""></a-image>
+
+					<!-- <a-image clickcaptivadoor position="-287.38609 -97.11234 389.23494" material="src: #navigate" spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50" rotation="14.737047448559904 -44.593305195031974 -174.59571003683038" geometry=""></a-image> -->
+				</a-entity>
+
+				<a-entity id="sceneCaptivaInterior" visible="false" position="591.413 2.52652 -6632.806"
+					rotation="0 -95.85010954743542 0">
+					<a-sky src="#captiva-interior" rotation="0 -90 0" material="" geometry="">
+					</a-sky>
+
+					<a-image class="clickable" id="captiva_rear_mirror" modal-event="" carline="captiva" part="rear_mirror"
+						position="-263.42796 156.45744 4.45332" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="1.4421347703442822 84.50497224604999 2.071242429397926" geometry=""></a-image>
+
+					<a-image class="clickable" id="captiva_steering_wheel" modal-event="" carline="captiva" part="steering_wheel"
+						position="-187.04675 -89.93172 204.56836" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="14.737047448559904 -84.36688941742347 0" geometry=""></a-image>
+					<a-image class="clickable" id="" modal-event="" carline="captiva" part="dashboard"
+						position="-427.51205 -70.20573 214.58736" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="14.737047448559904 -84.36688941742347 0" geometry=""></a-image>
+
+					<a-image class="clickable" id="captiva_touchscreen" modal-event="" carline="captiva" part="touchscreen"
+						position="-371.63631 -30.26616 -14.07999" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="-1.0164271285620803 88.3288925707531 1.1098192491684045" geometry=""></a-image>
+					<a-image class="clickable" id="captiva_key_less" modal-event="" carline="captiva" part="keyless"
+						position="-436.56766 -112.49081 123.9324" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="14.737047448559904 -84.36688941742347 0" geometry=""></a-image>
+					<a-image class="clickable" id="captiva_seating" modal-event="" carline="captiva" part="seating"
+						position="319.00057 -74.05354 -365.94605" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="1.4421347703442822 129.61852311906074 2.071242429397926" geometry=""></a-image>
+					<a-image class="clickable" id="captiva_trunk" modal-event="" carline="captiva" part="trunk"
+						position="486.1674 -66.74735 11.73546" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="30 30 30"
+						rotation="1.4421347703442822 -90.52446684169442 2.071242429397926" geometry=""></a-image>
+					<a-image class="clickable" id="" modal-event="" carline="captiva" part="sunroof"
+						position="170.20955 319.21346 -90.41547" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="59.802 -45.599 47.311" geometry=""></a-image>
+
+					<a-image class="clickable" position="-296.14561 -73.19597 380.86322" ascene="sceneCaptivaDoor" nav="CaptivaOpen" clickcaptivadoor
+						material="src: #back" scale="50 50 50"
+						rotation="14.737047448559904 -59.51255322244347 0" geometry=""></a-image>
+				</a-entity>
+
+
+				<a-entity id="sceneCaptivaRear" visible="false" position="1514.71288 2.52652 -5157.64488"
+					rotation="0 92.56878025472119 0">
+					<a-sky src="#captiva-back" rotation="0 89.310 0" material="" geometry="">
+					</a-sky>
+
+					<a-image class="clickable" id="captiva_rear_lights" modal-event="" carline="captiva" part="rear_lights"
+						position="337.80947 -102.63189 -156.7669" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="1.4421347703442822 -78.95415712682257 2.071242429397926" geometry=""></a-image>
+					<a-image class="clickable" id="captiva_rear_camera" modal-event="" carline="captiva" part="rear_camera"
+						position="329.77013 -142.26453 22.42773" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="1.4421347703442822 -90.38695697086303 2.071242429397926" geometry=""></a-image>
+					<a-image class="clickable" id="captiva_rear_trunk" modal-event="" carline="captiva" part="trunk"
+						position="326.02904 -174.14876 105.8157" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="1.4421347703442822 -90.38695697086303 2.071242429397926" geometry=""></a-image>
+
+					<a-image class="clickable" id="" clickcaptivaside="" ascene="sceneCaptivaSide" position="367.70066 -180.73698 -220.47244"
+						material="src: #navigate"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="-33.738619766278525 -76.13119407021303 -7.5842423341467065" geometry=""></a-image>
+				</a-entity>
+
+
+
+				<!-- Malibu Scene -->
+				<a-entity  id="sceneMalibu" visible="false" position="950.01503 2.52652 -368.40289" rotation="0 -92.494 0">
+					<a-sky src="#malibu-front" rotation="0 -90 0" material="" geometry="">
+					</a-sky>
+
+					<a-image class="clickable" id="malibu_info_hood" modal-event="" carline="malibu" part="hood"
+						position="-270.16009 -77.60746 5.43359" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="4.058833020706752 -106.0269859045491 0" geometry=""></a-image>
+					<a-image class="clickable" id="malibu_info_headlight" modal-event="" carline="malibu" part="headlight"
+						position="-349.99269 -126.45533 -137.78354" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="4.058833020706752 -106.0269859045491 0" geometry=""></a-image>
+
+					<!-- <a-image class="clickable" id="malibu_move_side" ascene="sceneMalibuSide" nav="MalibuSide" clickmalibuside=""
+						position="-263.62001 -95.6837 -145.27245" material="src: #navigate"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="52.80608223043719 -104.05085446914289 175.08100528930618" geometry=""></a-image> -->
+
+					<!-- <a-image class="clickable" nav="CaptivaFront" clickcaptiva="" ascene="sceneCaptiva" position="-59.23436 -128.21399 365.77047"
+						material="src: #navigate"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="0 -43.56140820600136 0" geometry=""></a-image>
+					<a-image class="clickable" nav="OptraFront" clickoptra="" ascene="sceneOptra" position="255.60393 -85.50204 397.90577"
+						material="src: #navigate"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="0 -24.356435871011293 0" geometry=""></a-image> -->
+				</a-entity>
+
+				<a-entity  id="sceneMalibuSide" visible="false" position="1616.90647 2.52652 -1155.58781"
+					rotation="0 176.30598905529587 0">
+					<a-sky src="#malibu-side" rotation="0 -90 0" material="" geometry="">
+					</a-sky>
+
+					<a-image class="clickable" id="malibu_info_wheel" material="src: #more-info" modal-event="" carline="malibu"
+						part="wheel" position="336.91 -220.78403 195.44569"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="-9.166178806502911 -166.45684455699703 -5.381792569663823" geometry=""></a-image>
+					<a-image class="clickable" id="malibu_info_sunroof" material="src: #more-info" modal-event="" carline="malibu"
+						part="sunroof" position="-21.35598 -13.81142 483.55408"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="-11.270652788018424 178.90435265621414 0.2016811438860498" geometry=""></a-image>
+					<a-image class="clickable" id="malibu_info_rear" material="src: #more-info" modal-event="" carline="malibu"
+						part="rearlights" position="-321.96631 -71.07603 211.6349"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="-11.270652788018424 141.76580133362933 0.2016811438860498" geometry=""></a-image>
+
+					<a-image class="clickable" id="malibu_move_door" ascene="sceneMalibuDoor" material="src: #navigate" nav="MalibuOpen" clickmalibudoor=""
+						position="42.105 -158.11537 329.71775"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="-8.839592863278341 11.75480212490397 4.9486364765449204" geometry=""></a-image>
+					<a-image class="clickable" id="malibu_move_rear" ascene="sceneMalibuRear" material="src: #navigate" nav="MalibuRear" clickmaliburear=""
+						position="-387.892 -126.44404 147.3184"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="68.03128972044856 -56.48619014856247 -61.30648407899809" geometry=""></a-image>
+					<a-image class="clickable" id="" material="src: #navigate" nav="MalibuFront"  ascene="sceneMalibu" clickmalibu=""
+						position="380.91151 -135.39713 117.52015"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="0 0 4.2840054341931655" geometry=""></a-image>
+				</a-entity>
+
+				<a-entity  id="sceneMalibuDoor" visible="false" position="1525.21454 2.52652 -2157.29154"
+					rotation="0 -92.494 0">
+					<a-sky src="#malibu-door-open" rotation="0 -90 0" material="" geometry=""></a-sky>
+
+					<a-image class="clickable" id="malibu_info_dashboard" modal-event="" carline="malibu" part="dashboard"
+						position="-252.9977 -99.98581 -260.52947" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="1.9663911528889855 -129.00545827827077 0" geometry=""></a-image>
+					<a-image class="clickable" id="malibu_info_seating" modal-event="" carline="malibu" part="seating"
+						position="-10.297 -165.4473 -416.66215" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="1.9663911528889855 -154.35826775501457 0" geometry=""></a-image>
+					<a-image class="clickable" id="malibu_info_sunroof" modal-event="" carline="malibu" part="sunroof"
+						position="135.544 72.16396 -149.4113" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="1.9663911528889855 -154.35826775501457 0" geometry=""></a-image>
+
+					<a-image class="clickable" id="malibu_move_rear" ascene="sceneMalibuRear" nav="MalibuRear" clickmaliburear=""
+						position="360.981 -24.95759 -183.42644" material="src: #navigate"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="25.23191538197119 171.46736047541606 101.96643401045695" geometry=""></a-image>
+
+					<a-image class="clickable" id="malibu_move_interior" ascene="sceneMalibuInterior" nav="MalibuInterior" clickmalibuinterior=""
+						position="-129.984 -121.34846 -387.57029" material="src: #navigate"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="21.857766926445777 -151.25398242099575 87.26433698740003" geometry=""></a-image>
+
+					<a-image class="clickable" nav="MalibuSide" clickmalibuside="" ascene="sceneMalibuSide" position="-218.46403 -178.0465 180.56496"
+						material="src: #back" scale="50 50 50"
+						rotation="-12.629708678068736 157.61324098915276 88.0126198678409" geometry=""></a-image>
+
+				</a-entity>
+
+				<a-entity  id="sceneMalibuInterior" visible="false" position="2367.447 2.52652 -2722.411"
+					rotation="0 -91.641 0">
+					<a-sky src="#malibu-interior" rotation="0 -90 0" material="" geometry=""></a-sky>
+
+					<a-image class="clickable" id="malibu_info_key" modal-event="" carline="malibu" part="key"
+						position="-343.74456 -106.94123 80.31144" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="27.018397787189098 -107.61236012367608 0" geometry=""></a-image>
+					<a-image class="clickable" id="malibu_info_touchscreen" modal-event="" carline="malibu" part="touchscreen"
+						position="-347.6899 -53.25545 -57.40311" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="27.018397787189098 -97.98437733429773 0" geometry=""></a-image>
+					<a-image class="clickable" id="malibu_info_dashboard" modal-event="" carline="malibu" part="dashboard"
+						position="-356.694 -89.56494 234.4538" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="40.55509865494993 -91.54490467482242 0" geometry=""></a-image>
+					<a-image class="clickable" id="malibu_info_seating" modal-event="" carline="malibu" part="seating"
+						position="354.04325 -105.48843 -306.08648" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="-0.5855628666237014 119.89600229348581 1.4684908289203" geometry=""></a-image>
+					<a-image class="clickable" id="malibu_info_outlet" modal-event="" carline="malibu" part="outlet"
+						position="-129.19475 -377.67752 -31.84647" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="-81.22765365790167 103.43549779717239 -18.494504669027844" geometry=""></a-image>
+
+					<a-image class="clickable" id="" modal-event="" carline="malibu" part="sunroof"
+						position="346.70498 231.95795 -180.72831" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="67.16898823877668 -102.47350165914773 178.24545119181371" geometry=""></a-image>
+					<!-- <a-image class="clickable" id="malibu_move_back_side" nav="MalibuOpen" clickmalibudoor="" position="-215.855 -96.489 423.452" material="src: #navigate" spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50" rotation="4.069 -35.504 177.067" geometry=""></a-image> -->
+					<a-image class="clickable" id="malibu_move_back_side" nav="MalibuOpen" ascene="sceneMalibuDoor" clickmalibudoor=""
+						position="-283.59443 -96.489 362.90406" material="src: #back" scale="50 50 50"
+						rotation="4.069 -35.504000000000005 177.067" geometry=""></a-image>
+				</a-entity>
+
+				<a-entity  id="sceneMalibuRear" visible="false" position="2866.457 2.52652 -1213.414" rotation="0 89.421 0">
+					<a-sky src="#malibu-back" rotation="0 -90 0" material="" geometry=""></a-sky>
+
+
+					<a-image class="clickable" id="malibu_info_rearlights" modal-event="" carline="malibu" part="rearlights"
+						position="269.64334 -122.233 -162.12476" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="0 105.06212497754879 0" geometry=""></a-image>
+					<a-image class="clickable" id="malibu_info_camera" modal-event="" carline="malibu" part="camera"
+						position="306.991 -125.93025 -6.28887" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="0 105.06212497754879 0" geometry=""></a-image>
+
+					<a-image class="clickable" id="malibu_info_trunk" modal-event="" carline="malibu" part="trunk"
+						position="358.24052 -200.12158 66.54095" material="src: #more-info"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="0 105.06212497754879 0" geometry=""></a-image>
+
+					<a-image class="clickable" id="malibu_move_side" nav="MalibuSide" ascene="sceneMalibuSide" clickmalibuside=""
+						position="278.89298 -82.76609 -203.36927" material="src: #navigate"
+						spritesheet-animation="rows: 34; frameDuration: 0.08; lastFrameIndex: 33" scale="50 50 50"
+						rotation="-45.96496615657516 -73.64684907052576 178.9347194193561" geometry=""></a-image>
+
+				</a-entity>
+
+		
+			<!-- <a-entity foo id="cam" camera rotation="0 0 0" wasd-controls look-controls position="0 1.6 200"></a-entity> -->
+			<a-entity id='cam' position="0 1.6 200">
+				<a-camera id="" rotation="0 0 0" wasd-controls look-controls ></a-camera>
+			</a-entity>
+		</a-scene>
+	</div>
+
+</body>
+
+</html>
